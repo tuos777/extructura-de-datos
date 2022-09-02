@@ -1,0 +1,103 @@
+from audioop import mul
+import statistics
+
+#Taller #1 Henry Arturo Toro Arcila
+
+
+#imprime los primeros 10 numeros usando el ciclo for 
+'''
+for n in range (10):
+    print(n)
+'''
+#imprime la suma de todos los numeros pares del 10 al 20
+'''
+for n in range (10,20):
+    if n % 2==0:
+     print(n)
+'''
+#calcular el cuadrado de cada numero en la lista {1,2,3,4,5}
+'''
+lista=[1,2,3,4,5]
+
+print("lista original", lista)
+for i in range (0, len(lista)):
+    lista[i]=lista[i]*lista[i]
+
+print(" el cuadrado de cada nuemro en la lista es", lista)    
+'''
+
+#imprimir el promedio de una lista de numeros [10,20,30,40,50]
+
+'''
+lista=[10,20,30,40,50]
+
+print("la lista original de la lista es: ", lista)
+mean = statistics.mean(lista)
+
+
+print("el promedio de la lista es: ", mean)
+'''
+#mostrar si el numero es par o impar
+'''
+numero = int(input("Ingresa un número: "))
+if numero % 2 == 0:
+    print("El número es par")
+else:
+    print("El número es impar")
+'''
+
+#dada la siguiente lista de numeros [1,4,7,8,12,15,36,47] romper el bucle si el numero es mayor que 15
+
+'''
+lista=[1,4,7,8,12,15,36,47] 
+print(lista)
+milista=int(input("ingrese un numero de la lista"))
+for i in range(lista):
+    if i >=15:
+        break
+    else:
+        print(milista)
+
+#contar el numero de veces que aparece una letra en una cadena
+print('mi mama me mima'.count('m'))
+
+
+#imprimir en reversa una lista de numeros [10,20,30,40]
+
+milista=[10,20,30,40]
+nuevalista = milista[::-1]
+print(nuevalista) 
+
+
+#invertir una lista usando un bucle [1,2,3,4,5,6,7]
+''
+lista=[1,2,3,4,5,6,7]
+for i in reversed(lista):
+    print(i)
+
+
+#tabla de multiplicar de los primeros 5 numeros
+
+for f in range(1,6):
+	multiplicacion = 7 * f #hacemos la multiplicación
+	print(f'7 x {f} = {multiplicacion}') #mostramos el resultado
+
+factor = 5 #factor deseado, en este caso, haremos la tabla del 5
+desde = 1 #límite inferior (incluido)
+hasta = 10 #límite superior (incluido también)
+
+for f in range(desde, hasta + 1):
+	print(f'{factor} x {f} =  {factor * f}')
+
+tabla_desde = 1 #tablas del 1...
+tabla_hasta = 5 #...al 10
+desde = 1 #multiplicaciones desde el 1...
+hasta = 10 #...hasta el 10
+
+for factor1 in range(tabla_desde, tabla_hasta + 1):
+	print(f'Tabla de multiplicar del {factor1}:') #mostramos una cabecera para cada tabla
+	for factor2 in range(desde, hasta + 1):
+		print(f'{factor1} x {factor2} = {factor1 * factor2}')
+	print() #línea en blanco al final de cada tabla
+
+'''
