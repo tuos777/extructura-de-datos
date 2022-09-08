@@ -1,0 +1,95 @@
+#A=[64,2,25,10,13,32]
+
+#ordenar=sorted(A)
+
+#print(ordenar)
+'''
+lista=[]
+print("Cuantos elementos desea?")
+cant = int(int(input()))    
+i=0
+while i < cant:
+    print("Ingrese el elemento", i+1)
+    elemento = int(input())
+    lista.append(elemento) 
+    i+=1
+    print("La lista es: ", lista)
+
+'''
+'''
+    for ordenarmenor in range(1,len(lista)):
+        for posicion in range(len(lista)-ordenarmenor):
+            if lista[posicion] > lista[posicion+1]:
+                aux = lista[posicion]
+            lista[posicion] = lista[posicion+1]
+            lista[posicion+1] = aux
+            print("La lista ordenada es: ", lista)
+
+    for ordenarmayor in range(1,len(lista)):
+        for posicion in range(len(lista)-ordenarmayor):
+            if lista[posicion] < lista[posicion+1]:
+                aux = lista[posicion]
+            lista[posicion] = lista[posicion+1]
+            lista[posicion+1] = aux
+            print("La lista ordenada es: ", lista)
+
+            '''
+
+'''
+
+lista=["ronald", "beiby","sebastian","luis","victor","fabio","daniela","jhonfaber","christian","justin","jorge","thomas","anggie","leon","johnandres","daniel","cristhofer", "julian","camilo","wilson","henry","antonio","jhonsebastian"]            
+#profe vea que hermosura de codigo 
+
+for i in range(len(lista)):
+    lista[i].lower()
+    print(lista[i])
+
+for ordenarmenor in range(1,len(lista)):
+    for posicion in range(len(lista)-ordenarmenor):
+        if lista[posicion] > lista[posicion+1]:
+            aux = lista[posicion]
+            lista[posicion] = lista[posicion+1]
+            lista[posicion+1] = aux
+            print("La lista ordenada es: ", lista)
+'''
+
+
+
+lista = [5, 7, 3, 1, 8, 4, 9, 2, 6] 
+longitud = len(lista) 
+for i in range(longitud-1): 
+    print(lista) 
+    menor = i
+    print("El indice actual para comparar es", menor)
+    for j in range(i+1, longitud): 
+        if lista[j] < lista[menor]: 
+            menor = j 
+            print("Recorriendo lista. Es menor el indice", menor) 
+temporal = lista[menor] 
+lista[menor] = lista[i] 
+lista[i] = temporal 
+print("Cambiamos el elemento", lista[menor], "por el elemento", lista[i])
+
+
+def oreden_insercion(lista):
+
+    for i in range(len(lista)-1):
+        if lista[i+1]< lista[i]:
+            reubicar(lista,i+1)
+        print("DEBUUG",lista)
+    return lista
+
+def reubicar(lista,p):
+
+#Reubica el elemento en la posicion p en la posicion correcta, P tiene que ser una posicion valida
+
+    v = lista [p]
+
+    j = p
+    while j > 0 and v < lista[j-1]:
+        #Desplaza los elementos mayores a la derecha
+        lista[j]=lista[j-1]
+        j-=1
+
+    lista[j]=v
+    j-=1
